@@ -1,35 +1,48 @@
-public class Employee {
+package java8;
 
-    //variables
-
-    private int empId;
+public class Employee {        //Step 1 to create "Objects" in different ways .
+     //variables
+    private Integer empId;
     private String empName;
-    private double empSalary;
-
-    //Construtor
-
-
-    public void setEmpId(int empId) {
+    private Double empSal;
+    //constructor
+    public Employee(Integer empId, String empName, Double empSal) {
         this.empId = empId;
-    }
-
-    public void setEmpName(String empName) {
         this.empName = empName;
+        this.empSal = empSal;
     }
-
-    public void setEmpSalary(double empSalary) {
-        this.empSalary = empSalary;
-    }
-
-    public int getEmpId() {
+    //By using setters and getters
+    public Integer getEmpId() {
         return empId;
+    }
+
+    public void setEmpId(Integer empId) {
+        this.empId = empId;
     }
 
     public String getEmpName() {
         return empName;
     }
 
-    public double getEmpSalary() {
-        return empSalary;
+    public void setEmpName(String empName) {
+        this.empName = empName;
+    }
+
+    public Double getEmpSal() {
+        return empSal;
+    }
+
+    public void setEmpSal(Double empSal) {
+        this.empSal = empSal;
+        // By using generate and create "to String" .
+    }
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "empId=" + empId +
+                ", empName='" + empName + '\'' +
+                ", empSal=" + empSal +
+                '}';
     }
 }
+
